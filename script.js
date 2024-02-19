@@ -12,7 +12,7 @@ function navigate(direction) {
     var pageIndex = Array.from(article.querySelectorAll('.page')).indexOf(currentPage);
   
     // Calculate the index of the next page
-    var nextPageIndex = direction === 'next' ? (pageIndex + 1) % 3 : (pageIndex - 1 + 3) % 3;
+    var nextPageIndex = direction === 'next' ? (pageIndex + 1) % 4 : (pageIndex - 1 + 4) % 4;
   
     // Hide all pages
     article.querySelectorAll('.page').forEach(function(page) {
