@@ -1,25 +1,25 @@
 // script.js
 
-// JavaScript function for navigation
+// js function for navigation on the work screen
 function navigate(direction) {
-    // Get the article element
+    // get the article element
     var article = document.getElementById("work");
   
-    // Get the current page element
+    // get the current page element
     var currentPage = document.querySelector('.page[style="display: block;"]');
   
-    // Determine the index of the current page
+    // determine the index of the current page
     var pageIndex = Array.from(article.querySelectorAll('.page')).indexOf(currentPage);
   
-    // Calculate the index of the next page
+    // calculate the index of the next page
     var nextPageIndex = direction === 'next' ? (pageIndex + 1) % 4 : (pageIndex - 1 + 4) % 4;
   
-    // Hide all pages
+    // hide all pages
     article.querySelectorAll('.page').forEach(function(page) {
       page.style.display = 'none';
     });
   
-    // Display the next page
+    // display the next page
     article.querySelectorAll('.page')[nextPageIndex].style.display = 'block';
   }
   
